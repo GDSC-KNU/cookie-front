@@ -1,5 +1,6 @@
 import React from 'react';
 import { css, Global } from '@emotion/react';
+import { Toaster } from 'react-hot-toast';
 import normalize from 'emotion-normalize';
 import { theme as chakraTheme } from '@chakra-ui/react';
 import Routes from './pages/Routes';
@@ -7,6 +8,15 @@ import Routes from './pages/Routes';
 function App() {
 	return (
 		<>
+			<Toaster
+				position="top-center"
+				reverseOrder={false}
+				toastOptions={{
+					custom: {
+						duration: 5000,
+					},
+				}}
+			/>
 			<Global
 				styles={css`
 					${normalize}
