@@ -1,5 +1,5 @@
 // TODO: h1 회원 이름 변경
-import CookieList from "../components/Main/CookieList";
+import CookieList from "../components/Main/CardList";
 
 const Main = () => {
 	return (

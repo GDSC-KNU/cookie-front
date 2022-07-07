@@ -1,20 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import { CardListType, CardType } from '../../types/cards';
-
-const dummyCards = [
-	{
-		title: 'git 꿀팀',
-		desc: '실전에서 겪은 문제들을 정리',
-		link: 'https://dangitgit.com/ko#accidental-commit-master',
-	},
-] as CardType[];
+import { useAppSelector } from '../../hooks/useStore';
 
 const CookieList = () => {
-	const [cardList, setCardList] = useState<CardType[]>(dummyCards);
+	const {cardList, status, error} = useAppSelector(state => state.cards);
 	return (
 		<section>
-			{cardList.map(card => (
+			{cardList?.map(card => (
 				<Card key={card.id} cardInfo={card} />
 			))}
 		</section>
