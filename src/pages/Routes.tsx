@@ -9,7 +9,7 @@ const Routes = () => {
 	return (
 		<Router>
 			<ReactRouterRoutes>
-				<Route path="/" element={<Main />} />
+				<Route path="/main" element={<Main />} />
 			</ReactRouterRoutes>
 		</Router>
 	);
